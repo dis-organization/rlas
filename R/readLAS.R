@@ -1,4 +1,12 @@
-readLAS <- function (lasfile, skip = 0, nrows = NULL, returnSP = FALSE,
+#' rlas
+#'
+#' @param lasfile LAS file to read
+#' @param skip number of records to skip
+#' @param nrows number of records to read
+#' @param returnHeaderOnly logical, return header only?
+#'
+#' @export
+readLAS <- function (lasfile, skip = 0, nrows = NULL,
                      returnHeaderOnly = FALSE)
 {
   hd <- publicHeaderDescription()
@@ -58,17 +66,13 @@ readLAS <- function (lasfile, skip = 0, nrows = NULL, returnSP = FALSE,
   mm[, 3] <- mm[, 3] * xyzScaleOffset[3, 1] + xyzScaleOffset[3,
                                                              2]
   colnames(mm) <- c("x", "y", "z")
-  if (returnSP) {
-    require(sp)
-    SpatialPoints(cbind(mm, gpstime, intensity))
-  }
-  else {
-    cbind(mm, gpstime, intensity)
-  }
+
+
+  cbind(mm, gpstime, intensity)
 }
 publicHeaderDescription <- function ()
 {
-  hd <- structure(list(Item = c("File Signature (¡°LASF¡±)",
+  hd <- structure(list(Item = c("File Signature ('LASF')",
                                 "(1.1) File Source ID", "(1.1) Global Encoding", "(1.1) Project ID - GUID data 1",
                                 "(1.1) Project ID - GUID data 2", "(1.1) Project ID - GUID data 3",
                                 "(1.1) Project ID - GUID data 4", "Version Major", "Version Minor",
