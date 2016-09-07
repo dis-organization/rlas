@@ -1,33 +1,47 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Travis-CI Build Status](https://travis-ci.org/r-gris/rlas.svg?branch=master)](https://travis-ci.org/r-gris/rlas) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/r-gris/rlas?branch=master&svg=true)](https://ci.appveyor.com/project/r-gris/rlas) [![Coverage Status](https://img.shields.io/codecov/c/github/r-gris/rlas/master.svg)](https://codecov.io/github/r-gris/rlas?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/r-gris/rlas.svg?branch=master)](https://travis-ci.org/r-gris/rlas)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/r-gris/rlas?branch=master&svg=true)](https://ci.appveyor.com/project/r-gris/rlas)
+[![Coverage Status](https://img.shields.io/codecov/c/github/r-gris/rlas/master.svg)](https://codecov.io/github/r-gris/rlas?branch=master)
 
-Read "LAS" format, raw LiDAR point cloud format
------------------------------------------------
+  
 
-Read the raw point records into a data frame.
 
-``` r
+## Read "LAS" format, raw LiDAR point cloud format
+
+Read the raw point records into a data frame. 
+
+
+
+```r
 library(rlas)
 x <- lasfile("somefile.las")
+
 ```
 
-TODO
-----
+## TODO 
 
-Not all the specification is supported, and there are better tools for LAS data - just not available in R yet.
+Not all the specification is supported, and there are better tools for LAS data - just not available in R yet. 
 
--   fix warning from readBin, see tests "srs-las"
--   put all file contents into a `spbabel::map_table`-like structure
--   put plot methods into 'r-gris/rangl'
--   support RGB LAS
--   extract all bit type columns
+* fix warning from readBin, see tests "srs-las"
+* put all file contents into a `spbabel::map_table`-like structure
+* put plot methods into 'r-gris/rangl'
+* support RGB LAS
+* extract all bit type columns
 
-Installation
-------------
 
-``` r
+
+
+## Installation
+
+
+```r
 devtools::install_github("r-gris/rlas")
 ```
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. 

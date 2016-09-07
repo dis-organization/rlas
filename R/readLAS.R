@@ -18,6 +18,9 @@ readLAS <- function(lasfile, ...) {
 #' @param nrows number of records to read
 #' @param ... reserved args, unused
 #' @param returnHeaderOnly logical, return header only?
+#' @examples 
+#' srs <- lasfile(system.file("extdata/lasfiles/srs.las", package = "rlas"))
+#' plot(srs)
 #' @export
 lasfile <- function(x, ...) {
   UseMethod("lasfile")

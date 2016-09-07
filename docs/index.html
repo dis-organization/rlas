@@ -53,26 +53,29 @@
   <div class="span8">
     <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<p><a href="https://travis-ci.org/r-gris/rlas"><img src="https://travis-ci.org/r-gris/rlas.svg?branch=master" alt="Travis-CI Build Status"/></a> <a href="https://ci.appveyor.com/project/r-gris/rlas"><img src="https://ci.appveyor.com/api/projects/status/github/r-gris/rlas?branch=master&amp;svg=true" alt="AppVeyor Build Status"/></a> <a href="https://codecov.io/github/r-gris/rlas?branch=master"><img src="https://img.shields.io/codecov/c/github/r-gris/rlas/master.svg" alt="Coverage Status"/></a></p>
+<p><a href="https://travis-ci.org/r-gris/rlas"><img src="https://travis-ci.org/r-gris/rlas.svg?branch=master" alt="Travis-CI Build Status"/></a>
+<a href="https://ci.appveyor.com/project/r-gris/rlas"><img src="https://ci.appveyor.com/api/projects/status/github/r-gris/rlas?branch=master&amp;svg=true" alt="AppVeyor Build Status"/></a>
+<a href="https://codecov.io/github/r-gris/rlas?branch=master"><img src="https://img.shields.io/codecov/c/github/r-gris/rlas/master.svg" alt="Coverage Status"/></a></p>
 
 <h2>Read &ldquo;LAS&rdquo; format, raw LiDAR point cloud format</h2>
 
-<p>Read the raw point records into a data frame.</p>
+<p>Read the raw point records into a data frame. </p>
 
 <pre><code class="r">library(rlas)
 x &lt;- lasfile(&quot;somefile.las&quot;)
+
 </code></pre>
 
 <h2>TODO</h2>
 
-<p>Not all the specification is supported, and there are better tools for LAS data - just not available in R yet.</p>
+<p>Not all the specification is supported, and there are better tools for LAS data - just not available in R yet. </p>
 
 <ul>
-<li>  fix warning from readBin, see tests &ldquo;srs-las&rdquo;</li>
-<li>  put all file contents into a <code>spbabel::map_table</code>-like structure</li>
-<li>  put plot methods into &#39;r-gris/rangl&#39;</li>
-<li>  support RGB LAS</li>
-<li>  extract all bit type columns</li>
+<li>fix warning from readBin, see tests &ldquo;srs-las&rdquo;</li>
+<li>put all file contents into a <code>spbabel::map_table</code>-like structure</li>
+<li>put plot methods into &#39;r-gris/rangl&#39;</li>
+<li>support RGB LAS</li>
+<li>extract all bit type columns</li>
 </ul>
 
 <h2>Installation</h2>
@@ -80,7 +83,7 @@ x &lt;- lasfile(&quot;somefile.las&quot;)
 <pre><code class="r">devtools::install_github(&quot;r-gris/rlas&quot;)
 </code></pre>
 
-<p>Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.</p>
+<p>Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. </p>
 
   </div>
 

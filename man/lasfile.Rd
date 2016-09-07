@@ -24,4 +24,8 @@ lasfile(x, ...)
 \description{
 Read LiDAR LAS file
 }
+\examples{
+srs <- lasfile(system.file("extdata/lasfiles/srs.las", package = "rlas"))
+plot(srs)
+}
 

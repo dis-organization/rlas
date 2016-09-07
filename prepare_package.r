@@ -1,7 +1,7 @@
 # Generate a template for a README.Rmd
 #devtools::use_readme_rmd()
 # Build README (better to use rmarkdown than knitr!)
-rmarkdown::render("README.Rmd", "all")
+knitr::knit("README.Rmd", "README.md")
 # Build vignette (better to use rmarkdown than knitr!)
 #vigs <- list.files("vignettes", pattern = "rmd$", full.names = TRUE, ignore.case = TRUE)
 #for (i in seq_along(vigs)) rmarkdown::render(vigs[i], "all")
@@ -20,7 +20,7 @@ rmarkdown::render("README.Rmd", "all")
 # Check spelling mistakes
 devtools::spell_check()
 
-staticdocs::build_site()
+staticdocs::build_site(launch = FALSE)
 
 # Run R CMD check
 devtools::check()
