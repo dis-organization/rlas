@@ -17,6 +17,7 @@ TODO
 
 Not all the specification is supported, and there are better tools for LAS data - just not available in R yet.
 
+-   fix warning from readBin, see tests "srs-las"
 -   put all file contents into a `spbabel::map_table`-like structure
 -   put plot methods into 'r-gris/rangl'
 -   support RGB LAS

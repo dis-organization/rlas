@@ -7,5 +7,6 @@ Description: Read LiDAR data and do stuff.
 License: GPL-3
 LazyData: TRUE
 Suggests:
-    covr
+    covr,
+    testthat
 RoxygenNote: 5.0.1

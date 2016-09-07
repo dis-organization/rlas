@@ -30,7 +30,7 @@ lasfile.character <- function (x, skip = 0, nrows = NULL,
   hd <- publicHeaderDescription()
   pheader <- vector("list", nrow(hd))
   names(pheader) <- hd$Item
-  con <- file(lasfile, open = "rb")
+  con <- file(x, open = "rb")
   isLASFbytes <- readBin(con, "raw", size = 1, n = 4, endian = "little")
   pheader[[hd$Item[1]]] <- readBin(isLASFbytes, "character",
                                    size = 4, endian = "little")
@@ -51,7 +51,7 @@ lasfile.character <- function (x, skip = 0, nrows = NULL,
                                                                                                    "Y offset", "Z offset")]))
   if (returnHeaderOnly)
     return(pheader)
-  con <- file(lasfile, open = "rb")
+  con <- file(x, open = "rb")
   junk <- readBin(con, "raw", size = 1, n = offsetToPointData)
   if (skip > 0) {
     junk <- readBin(con, "raw", size = 1, n = pointDataRecordLength *
@@ -86,7 +86,7 @@ lasfile.character <- function (x, skip = 0, nrows = NULL,
   colnames(mm) <- c("x", "y", "z")
 
 
-  cbind(mm, gpstime, intensity)
+  as.data.frame(cbind(mm, gpstime, intensity))
 }
 publicHeaderDescription <- function ()
 {

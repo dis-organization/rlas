@@ -8,3 +8,4 @@
 ^prepare_package.r$
 ^CONDUCT\.md$
 ^docs$
+^data-raw$
