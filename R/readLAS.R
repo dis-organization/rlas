@@ -1,13 +1,31 @@
-#' rlas
-#'
-#' @param lasfile LAS file to read
-#' @param skip number of records to skip
-#' @param nrows number of records to read
-#' @param returnHeaderOnly logical, return header only?
+#' Deprecated functions in rlas
+#' 
+#' @param lasfile file name
+#' @param ... ignored
 #'
 #' @export
-readLAS <- function (lasfile, skip = 0, nrows = NULL,
-                     returnHeaderOnly = FALSE)
+#' @rdname rlas-deprecated
+#' @title readLAS
+readLAS <- function(lasfile, ...) {
+  .Deprecated("lasfile", old = "readLAS")
+}
+
+
+#' Read LiDAR LAS file
+#'
+#' @param x LAS file to read
+#' @param skip number of records to skip
+#' @param nrows number of records to read
+#' @param ... reserved args, unused
+#' @param returnHeaderOnly logical, return header only?
+#' @export
+lasfile <- function(x, ...) {
+  UseMethod("lasfile")
+}
+#' @rdname lasfile
+#' @export
+lasfile.character <- function (x, skip = 0, nrows = NULL,
+                     returnHeaderOnly = FALSE, ...)
 {
   hd <- publicHeaderDescription()
   pheader <- vector("list", nrow(hd))

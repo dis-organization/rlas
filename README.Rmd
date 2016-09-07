@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+[![Travis-CI Build Status](https://travis-ci.org/r-gris/rlas.svg?branch=master)](https://travis-ci.org/r-gris/rlas)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/r-gris/rlas?branch=master&svg=true)](https://ci.appveyor.com/project/r-gris/rlas)
+[![Coverage Status](https://img.shields.io/codecov/c/github/r-gris/rlas/master.svg)](https://codecov.io/github/r-gris/rlas?branch=master)
+
+  
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+## Read "LAS" format, raw LiDAR point cloud format
+
+Read the raw point records into a data frame. 
+
+
+```{r,eval=FALSE}
+library(rlas)
+x <- lasfile("somefile.las")
+
+
+```
+
+## TODO 
+
+Not all the specification is supported, and there are better tools for LAS data - just not available in R yet. 
+
+* put all file contents into a `spbabel::map_table`-like structure
+* put plot methods into 'r-gris/rangl'
+* support RGB LAS
+* extract all bit type columns
+
+
+
+
+## Installation
+
+```{r,eval=FALSE}
+devtools::install_github("r-gris/rlas")
+```
+
+
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms. 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Home. rlas 0.1.1.9001</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">rlas 0.1.1.9001</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <div class="row">
+  <div class="span8">
+    <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<p><a href="https://travis-ci.org/r-gris/rlas"><img src="https://travis-ci.org/r-gris/rlas.svg?branch=master" alt="Travis-CI Build Status"/></a> <a href="https://ci.appveyor.com/project/r-gris/rlas"><img src="https://ci.appveyor.com/api/projects/status/github/r-gris/rlas?branch=master&amp;svg=true" alt="AppVeyor Build Status"/></a> <a href="https://codecov.io/github/r-gris/rlas?branch=master"><img src="https://img.shields.io/codecov/c/github/r-gris/rlas/master.svg" alt="Coverage Status"/></a></p>
+
+<h2>Read &ldquo;LAS&rdquo; format, raw LiDAR point cloud format</h2>
+
+<p>Read the raw point records into a data frame.</p>
+
+<pre><code class="r">library(rlas)
+x &lt;- lasfile(&quot;somefile.las&quot;)
+</code></pre>
+
+<h2>TODO</h2>
+
+<p>Not all the specification is supported, and there are better tools for LAS data - just not available in R yet.</p>
+
+<ul>
+<li>  put all file contents into a <code>spbabel::map_table</code>-like structure</li>
+<li>  put plot methods into &#39;r-gris/rangl&#39;</li>
+<li>  support RGB LAS</li>
+<li>  extract all bit type columns</li>
+</ul>
+
+<h2>Installation</h2>
+
+<pre><code class="r">devtools::install_github(&quot;r-gris/rlas&quot;)
+</code></pre>
+
+<p>Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.</p>
+
+  </div>
+
+  <div class="span3 offset1 sidebar">
+        <h2>Authors</h2>
+    <ul>
+      <li><a href='mailto:mdsumner@gmail.com'>Michael D. Sumner</a> [aut, cre]</li>
+    </ul>
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
